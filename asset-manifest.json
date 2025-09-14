@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/REPO-NAME/static/css/main.32bae9c6.css",
-    "main.js": "/REPO-NAME/static/js/main.7364b0d2.js",
-    "static/js/453.9d8967d5.chunk.js": "/REPO-NAME/static/js/453.9d8967d5.chunk.js",
-    "static/media/logo.jpg": "/REPO-NAME/static/media/logo.a0971148598129d4fb38.jpg",
-    "static/media/logo-removebg-preview.png": "/REPO-NAME/static/media/logo-removebg-preview.f5e070f209d2a8aaaed7.png",
-    "index.html": "/REPO-NAME/index.html",
-    "main.32bae9c6.css.map": "/REPO-NAME/static/css/main.32bae9c6.css.map",
-    "main.7364b0d2.js.map": "/REPO-NAME/static/js/main.7364b0d2.js.map",
-    "453.9d8967d5.chunk.js.map": "/REPO-NAME/static/js/453.9d8967d5.chunk.js.map"
+    "main.css": "/Conference-attendance-management/static/css/main.32bae9c6.css",
+    "main.js": "/Conference-attendance-management/static/js/main.f1dabc96.js",
+    "static/js/453.9d8967d5.chunk.js": "/Conference-attendance-management/static/js/453.9d8967d5.chunk.js",
+    "static/media/logo.jpg": "/Conference-attendance-management/static/media/logo.a0971148598129d4fb38.jpg",
+    "static/media/logo-removebg-preview.png": "/Conference-attendance-management/static/media/logo-removebg-preview.f5e070f209d2a8aaaed7.png",
+    "index.html": "/Conference-attendance-management/index.html",
+    "main.32bae9c6.css.map": "/Conference-attendance-management/static/css/main.32bae9c6.css.map",
+    "main.f1dabc96.js.map": "/Conference-attendance-management/static/js/main.f1dabc96.js.map",
+    "453.9d8967d5.chunk.js.map": "/Conference-attendance-management/static/js/453.9d8967d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32bae9c6.css",
-    "static/js/main.7364b0d2.js"
+    "static/js/main.f1dabc96.js"
   ]
 }
