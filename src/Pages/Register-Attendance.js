@@ -84,7 +84,7 @@ export default function RegisterAttendance() {
     //   alert("Please register payment before check-in!");
     //   return;
     // }
-     setVisitorCheckins([...visitorCheckins, person.id]);
+    setVisitorCheckins([...visitorCheckins, person.id]);
     showToast(`✅ Welcome to ${person.name}`);
   };
 
@@ -104,36 +104,44 @@ export default function RegisterAttendance() {
         {/* Step 1: Choose Members or Visitors */}
         {!mode && (
           <div className="row g-4">
-            <div className="col-12 p-4">
+            <div className="col-12 col-md-6">
               <div
-                className="rounded shadow text-center p-5 h-100"
-                style={{ backgroundColor: "#218ae8" }}
+                className="card text-center border-0 h-100 shadow-lg option-card"
+                style={{
+                  background: "linear-gradient(135deg, #1d72b8, #4fc3f7)",
+                  borderRadius: "20px",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease"
+                }}
+                onClick={() => setMode("members")}
               >
-                <button
-                  className="btn btn-light w-100 py-4 fs-2"
-                  style={{ color: "#218ae8" }}
-                  onClick={() => setMode("members")}
-                >
-                  <FaUsers className="me-2" /> Members
-                </button>
+                <div className="card-body d-flex flex-column justify-content-center align-items-center text-white py-5">
+                  <FaUsers size={70} className="mb-3" />
+                  <h2 className="fw-bold mb-0">Members</h2>
+                  <p className="mt-2 mb-0">Manage and check-in official members</p>
+                </div>
               </div>
             </div>
-            <div className="col-12 p-4">
+
+            <div className="col-12 col-md-6">
               <div
-                className="rounded shadow text-center p-5 h-100"
-                style={{ backgroundColor: "#3ab63c" }}
+                className="card text-center border-0 h-100 shadow-lg option-card"
+                style={{
+                  background: "linear-gradient(135deg, #2ecc71, #27ae60)",
+                  borderRadius: "20px",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease"
+                }}
+                onClick={() => setMode("visitors")}
               >
-                <button
-                  className="btn btn-light w-100 py-4 fs-2 fw-bold"
-                  style={{ color: "#3ab63c" }}
-                  onClick={() => setMode("visitors")}
-                >
-                  <FaUserCheck className="me-2" /> Visitors
-                </button>
+                <div className="card-body d-flex flex-column justify-content-center align-items-center text-white py-5">
+                  <FaUserCheck size={70} className="mb-3" />
+                  <h2 className="fw-bold mb-0">Visitors</h2>
+                  <p className="mt-2 mb-0">Check-in and manage event visitors</p>
+                </div>
               </div>
             </div>
           </div>
         )}
+
 
         {/* Step 2: Show List with Search */}
         {mode && (
@@ -220,7 +228,7 @@ export default function RegisterAttendance() {
                               </button>
                             ) : (
                               <>
-                              <button
+                                <button
                                   className="btn btn-sm btn-success"
                                   disabled={isVisitorChecked}
                                   onClick={() => handleVisitorCheckIn(person)}
