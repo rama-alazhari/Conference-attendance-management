@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Conference-attendance-management/static/css/main.683f60a0.css",
-    "main.js": "/Conference-attendance-management/static/js/main.6c370031.js",
+    "main.css": "/Conference-attendance-management/static/css/main.ab5a86b6.css",
+    "main.js": "/Conference-attendance-management/static/js/main.a324ae60.js",
     "static/js/453.9d8967d5.chunk.js": "/Conference-attendance-management/static/js/453.9d8967d5.chunk.js",
     "static/media/logo.jpg": "/Conference-attendance-management/static/media/logo.a0971148598129d4fb38.jpg",
     "static/media/20250915_112237 (1).png": "/Conference-attendance-management/static/media/20250915_112237 (1).87c5cc8c39f49a160fdd.png",
     "index.html": "/Conference-attendance-management/index.html",
-    "main.683f60a0.css.map": "/Conference-attendance-management/static/css/main.683f60a0.css.map",
-    "main.6c370031.js.map": "/Conference-attendance-management/static/js/main.6c370031.js.map",
+    "main.ab5a86b6.css.map": "/Conference-attendance-management/static/css/main.ab5a86b6.css.map",
+    "main.a324ae60.js.map": "/Conference-attendance-management/static/js/main.a324ae60.js.map",
     "453.9d8967d5.chunk.js.map": "/Conference-attendance-management/static/js/453.9d8967d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.683f60a0.css",
-    "static/js/main.6c370031.js"
+    "static/css/main.ab5a86b6.css",
+    "static/js/main.a324ae60.js"
   ]
 }
