@@ -1,29 +1,55 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-
   return (
-    <>
-      <div className="navbars w-100">
-        <div className="d-flex flex-row-reverse text-light fs-5 list-unstyled p-2" style={{ backgroundColor: "#ff9712" }}>
-          <NavLink to="/profile" className="text-decoration-none text-light"><li className="me-5">Profile</li></NavLink>
-          <NavLink to="/dashboard-user" className="text-decoration-none text-light"><li className="me-5">Admin Panel</li></NavLink>
+    <nav className="navbar navbar-expand-md navbar-dark" style={{ backgroundColor: "#ff9712" }}>
+      <div className="container-fluid">
+        {/* Logo */}
+        <NavLink to="/" className="navbar-brand">
+          <img
+            src={require("../Images/20250915_112237 (1).png")}
+            width={70}
+            height={70}
+            alt="Logo"
+          />
+        </NavLink>
+
+        {/* Toggler Button for small screens */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Links */}
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav align-items-center">
+            <li className="nav-item">
+              <NavLink to="/settings" className="nav-link text-light fw-bold fs-4 me-3">Settings</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/profile" className="nav-link text-light fw-bold fs-4 me-3">Profile</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/dashboard-user" className="nav-link text-light fw-bold fs-4 me-3">Admin Panel</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login">
+                <button className="btn btn-dark fw-bold ms-md-3 fs-4">Login</button>
+              </NavLink>
+            </li>
+          </ul>
         </div>
-
-        <nav className="navbar navbar-expand-lg navbar-dark shadow-sm" style={{ backgroundColor: "#ffff" }}>
-          <div className="container-fluid">
-            <img src={require('../Images/logo-removebg-preview.png')} width={100} height={70} />
-           <NavLink to="/" className="text-decoration-none"><span className="navbar-brand fw-bold text-dark">Conference Dashboard</span></NavLink> 
-           <NavLink to="/login"><button className="btn btn-outline-light" style={{ backgroundColor: "#ff9712" }}>Login</button></NavLink>
-          </div>
-        </nav>
       </div>
+    </nav>
+  );
+};
 
-    </>
-  )
-
-
-}
-export default Header
-
+export default Header;

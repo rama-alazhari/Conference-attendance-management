@@ -120,9 +120,9 @@ const Profile = () => {
 
 
   return (
-    <div>
+    <div className="page">
       {/* <!-- --------main profile-------- --> */}
-      <motion.main className="container my-4"    >
+      <motion.main className="container my-4 flex-grow-1"    >
         <div className="row g-4">
           {/* Profile & Password side by side */}
           <motion.div className="col-md-6" initial={{ opacity: 0, scale: 0.9 }}  

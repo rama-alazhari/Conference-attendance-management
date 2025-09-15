@@ -60,6 +60,27 @@ const AddNewUser = () => {
           </div>
 
           <div className="mb-3">
+            <label for="title" >User Type :</label>
+            <select className="form-select mt-2" aria-label="User Type" name="role" value={user.role} onChange={handleChange}>
+              <option value="" disabled>Choose the type of user</option>
+              <option value="USER">User</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+          </div>
+
+          <div className="mb-3">
+            <label>Site</label>
+            <input
+              type="text"
+              className="form-control"
+              name="site"
+              value={user.site}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3">
             <label>Password</label>
             <input
               type="password"
@@ -71,7 +92,7 @@ const AddNewUser = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary w-100">
+          <button type="submit" className="btn text-light w-100" style={{backgroundColor:"#218ae8"}}>
             Add User
           </button>
         </form>

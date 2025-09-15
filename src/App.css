@@ -2,3 +2,26 @@
   transform: translateY(-5px);
   transition: transform 0.3s ease;
 }
+.div-footer-link a {
+  transition: all 0.3s ease;
+}
+
+.div-footer-link a:hover {
+  color: #ff9712 !important;
+  font-size: 25px !important;
+}
+
+
+html, body, #root {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page main {
+  flex: 1; /* ياخد المساحة الفاضية */
+}

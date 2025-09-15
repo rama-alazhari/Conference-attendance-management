@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
+import Footer from "../Components/Footer";
 
 export default function MembersPage() {
   const [members, setMembers] = useState([
@@ -134,14 +135,15 @@ export default function MembersPage() {
   });
 
   return (
+    <div className="page">
     <div className="container py-4">
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
         <h3>Member Management</h3>
         <div className="d-flex flex-wrap gap-2">
-          <button className="btn btn-success" onClick={handleAdd}>
+          <button className="btn text-light" style={{backgroundColor:"#3ab63c"}} onClick={handleAdd}>
             <FaPlus className="me-1" /> Add a Member
           </button>
-          <label className="btn btn-primary mb-0">
+          <label className="btn text-light mb-0" style={{backgroundColor:"#bfb75bff"}}>
             <FaUpload className="me-1" /> Upload Excel
             <input
               type="file"
@@ -150,7 +152,7 @@ export default function MembersPage() {
               onChange={handleUpload}
             />
           </label>
-          <button className="btn btn-secondary" onClick={downloadTemplate}>
+          <button className="btn text-light" style={{backgroundColor:"#218ae8"}} onClick={downloadTemplate}>
             <FaDownload className="me-1" /> Download Template
           </button>
         </div>
@@ -200,7 +202,7 @@ export default function MembersPage() {
                   </td>
                   <td>
                     <button
-                      className="btn btn-sm btn-warning me-2"
+                      className="btn btn-sm btn-warning me-2 mb-2 mb-lg-0"
                       onClick={() => handleEdit(member)}
                     >
                       <FaEdit /> Edit
@@ -313,6 +315,8 @@ export default function MembersPage() {
           </div>
         </div>
       )}
+    </div>
+   <Footer />
     </div>
   );
 }

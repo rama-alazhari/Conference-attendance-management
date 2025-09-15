@@ -64,6 +64,27 @@ const EditUser = () => {
           </div>
 
           <div className="mb-3">
+            <label for="title" >User Type :</label>
+            <select className="form-select mt-2" aria-label="User Type" name="role" value={user.role} onChange={handleChange}>
+              <option value="" disabled>Choose the type of user</option>
+              <option value="USER">User</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+          </div>
+
+          <div className="mb-3">
+            <label>Site</label>
+            <input
+              type="text"
+              className="form-control"
+              name="site"
+              value={user.site}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3">
             <label>Password</label>
             <input
               type="password"
@@ -74,7 +95,7 @@ const EditUser = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-success w-100">
+          <button type="submit" className="btn w-100 text-light" style={{backgroundColor:"#218ae8"}}>
             Save Changes
           </button>
         </form>

@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
+import Footer from "../Components/Footer";
 
 export default function VisitorsPage() {
   const [visitors, setVisitors] = useState([
@@ -169,14 +170,15 @@ export default function VisitorsPage() {
   );
 
   return (
+     <div className="page">
     <div className="container py-4">
-      <div className="d-flex justify-content-between align-items-center mb-3">
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3 ">
         <h3>Visitor Management</h3>
-        <div>
-          <button className="btn btn-success me-2" onClick={handleAdd}>
+        <div className="d-flex flex-wrap gap-2">
+          <button className="btn me-2 text-light" style={{backgroundColor:"#3ab63c"}} onClick={handleAdd}>
             <FaPlus className="me-1" /> Add Visitor
           </button>
-          <label className="btn btn-primary me-2 mb-0">
+          <label className="btn me-2 mb-0 text-light" style={{backgroundColor:"#bfb75bff"}}>
             <FaUpload className="me-1" /> Upload Excel
             <input
               type="file"
@@ -185,7 +187,7 @@ export default function VisitorsPage() {
               onChange={handleUpload}
             />
           </label>
-          <button className="btn btn-secondary" onClick={downloadTemplate}>
+          <button className="btn text-light" style={{backgroundColor:"#218ae8"}} onClick={downloadTemplate}>
             <FaDownload className="me-1" /> Download Template
           </button>
         </div>
@@ -241,7 +243,7 @@ export default function VisitorsPage() {
                   </td>
                   <td>
                     <button
-                      className="btn btn-sm btn-warning me-2"
+                      className="btn btn-sm btn-warning me-2 mb-2 mb-lg-0"
                       onClick={() => handleEdit(visitor)}
                     >
                       <FaEdit /> Edit
@@ -389,6 +391,8 @@ export default function VisitorsPage() {
           </div>
         </div>
       )}
+    </div>
+      <Footer />
     </div>
   );
 }

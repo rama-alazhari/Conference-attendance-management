@@ -24,21 +24,21 @@ const Login = () => {
     // };  
 
     return (  
-        <motion.div className='container mt-5 pt-5' initial={{ opacity: 0, scale: 0.9 }}  
+        <motion.div className='container pt-5' initial={{ opacity: 0, scale: 0.9 }}  
             animate={{ opacity: 1, scale: 1 }}  
             exit={{ opacity: 0, scale: 0.9 }}  
             transition={{ duration: 0.5 }}  
         >  
-            <div className='p-5 col-md-6 m-auto' style={{ boxShadow: "1px 1px 20px 7px gray", borderRadius: "10px", margin: "auto" }}>  
+            <div className='p-5 col-12 col-md-10 col-lg-6 m-auto' style={{ boxShadow: "1px 1px 20px 7px gray", borderRadius: "10px", margin: "auto" }}>  
                 <div className='text-center'>  
                     <img   
                         src={require('../Images/logo.jpg')}   
-                        width="150"   
-                        height="70"   
+                        width="90"   
+                        height="90"   
                         className="mb-4"   
                         alt="Logo"   
                     />  
-                    <h2 className="mb-5 fs-4">Conference Attendance Management System</h2>  
+                    <h2 className="mb-3 fs-4">Conference Attendance Management System</h2>  
                 </div>  
                 <form >  
                     <div className="mb-3">  
@@ -64,14 +64,11 @@ const Login = () => {
                         />  
                     </div>  
                     {/* {error && <p className='text-danger fs-5 mb-2'>{error}</p>}   */}
-                    <button type="submit" className="btn text-light" style={{backgroundColor:"#ff9712"}} >  Login
+                    <button type="submit" className="btn text-light w-100" style={{backgroundColor:"#ff9712"}} >  Login
                         {/* {isLoading ? <Loader className='w-25 h-6 animate-spin mx-auto' /> : "Login"}   */}
                     </button>  
                 </form>       
-                 <div className='px-8 py-4 bg-light p-3'>
-				<p>	Don't have an account?{" "}<NavLink to='/signup' style={{ color: "#ff9712" }} >Sign up</NavLink>
-				</p>        
-			</div>     
+                   
             </div>  
         </motion.div>  
     );  

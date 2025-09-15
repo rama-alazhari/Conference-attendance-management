@@ -6,9 +6,9 @@ import { FaEdit } from "react-icons/fa";
 
 const DashboardUser = () => {
   const [users, setUsers] = useState([
-    { _id: "u1", username: "ahmed", email: "ahmed@example.com" },
-    { _id: "u2", username: "rama", email: "rama@example.com" },
-    { _id: "u3", username: "samir", email: "samir@example.com" },
+    { _id: "u1", username: "ahmed", email: "ahmed@example.com", role:"Admin" ,site:"xx" },
+    { _id: "u2", username: "rama", email: "rama@example.com",role:"User" ,site:"xx" },
+    { _id: "u3", username: "samir", email: "samir@example.com",role:"User" ,site:"xx" },
   ]);
   const [search, setSearch] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
@@ -38,6 +38,16 @@ const DashboardUser = () => {
     {
       name: "Email",
       selector: (row) => row.email,
+      sortable: true,
+    },
+     {
+      name: "Role",
+      selector: (row) => row.role,
+      sortable: true,
+    },
+     {
+      name: "Site",
+      selector: (row) => row.site,
       sortable: true,
     },
     {
@@ -73,7 +83,7 @@ const DashboardUser = () => {
         fixedHeader
         actions={
           <button
-            className="btn btn-primary"
+            className="btn text-light" style={{backgroundColor:"#218ae8"}}
             onClick={() => navigate("/add-new-user")}
           >
             + Add New User
